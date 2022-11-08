@@ -13,7 +13,7 @@ def purchase(user, item, amount):
     send_mail(
         '購入が完了しました',
         body,
-        settings.PAYMENT_PURCHASE_MAIL',
+        settings.PAYMENT_PURCHASE_MAIL,
         [user.email],
         fail_silently=False, #When it’s False, send_mail() will raise an smtplib.SMTPException if an error occurs
     )
