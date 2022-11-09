@@ -36,7 +36,7 @@ class Sales:
         return sum(self.price for sale in self.data)
 
     @classmethod
-    def from_asset(cls, path_"./sales.csv):
+    def from_asset(cls, path="./sales.csv"):
         data = []
         with open(path, encoding="utf-8") as f:
             reader = csv.DictReader(f)
@@ -49,3 +49,17 @@ class Sales:
                     continue
                 data.append(sale)
         return cls(data=data)
+
+#test.py
+import pytest
+
+class TestSale:
+    def test_validate_invalid_price(self):
+        sale = Sale(1, 1, 0, 2)
+        with pytest.raises(ValueError):
+            sale.validate
+
+class TestSales:
+    def test_from_asset_invalid_row(self):
+        #TODO
+
