@@ -1,4 +1,5 @@
 '''１つのテストメソッドでは１つの項目のみ確認する
+https://rinatz.github.io/python-book/ch08-02-pytest/
 '''
 def validate(text):
     return 0 < len(text) <= 100
