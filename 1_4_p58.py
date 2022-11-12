@@ -3,7 +3,7 @@ import pytest
 class TestPostDetailView:
     @pytest.mark.django_db
     def test_get(self, client):
-        post=PostFactory(
+        post=PostFactory( #https://factoryboy.readthedocs.io/en/stable/index.html
             title="記事タイトル",
             author_username="theusername",
         )
