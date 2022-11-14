@@ -1,5 +1,5 @@
 '''
-try節はできるだけ短く、１つの目的に絞って処理を実装する
+try節はできるだけ短く、1つの目的に絞って処理を実装する
 '''
 def purchase_from_view(request):
     try:
